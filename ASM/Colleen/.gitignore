@@ -1,0 +1,3 @@
+*.swp
+.gdb*
+a.out

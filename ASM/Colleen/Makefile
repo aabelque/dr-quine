@@ -6,7 +6,7 @@
 #    By: azziz <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/06 15:53:21 by azziz             #+#    #+#              #
-#    Updated: 2021/05/06 16:00:55 by azziz            ###   ########.fr        #
+#    Updated: 2021/09/30 13:16:12 by zizou            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ O_DIR = obj/
 
 NAME = Colleen
 
-CC = nasm -f macos
+NASM = nasm -g -f elf64
+CC = gcc -g
 
 SRC = Colleen.s
 
@@ -29,9 +30,9 @@ $(NAME): $(OBJS)
 	@$(CC) -o $(NAME) $(OBJS)
 	@tput dl; tput el1; tput cub 100; echo "\033[33mBuilt:\033[0m \033[32;1;4m$(notdir $@)\033[0m"
 
-$(OBJS): $(O_DIR)%.o: $(C_DIR)%.c
+$(OBJS): $(O_DIR)%.o: $(C_DIR)%.s
 	@mkdir -p $(O_DIR) 2> /dev/null || echo "" > /dev/null
-	@$(CC) -o $@ -c $< -fPIC
+	@$(NASM) -o $@ $<
 
 clean:
 	@rm -rf $(O_DIR) 2> /dev/null || echo "" > /dev/null
