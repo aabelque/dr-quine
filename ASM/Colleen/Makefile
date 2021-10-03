@@ -6,7 +6,7 @@
 #    By: azziz <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/06 15:53:21 by azziz             #+#    #+#              #
-#    Updated: 2021/09/30 13:16:12 by zizou            ###   ########.fr        #
+#    Updated: 2021/10/03 22:15:17 by zizou            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ O_DIR = obj/
 
 NAME = Colleen
 
-NASM = nasm -g -f elf64
-CC = gcc -g
+NASM = nasm -f elf64
+CC = gcc
 
 SRC = Colleen.s
 
