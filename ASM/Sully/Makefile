@@ -6,7 +6,7 @@
 #    By: zizou </var/mail/zizou>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/03 22:17:17 by zizou             #+#    #+#              #
-#    Updated: 2021/10/03 22:17:21 by zizou            ###   ########.fr        #
+#    Updated: 2021/10/06 23:27:33 by zizou            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ O_DIR = obj/
 
 NAME = Sully
 
-NASM = nasm -f elf64
-CC = gcc
+NASM = nasm -g -f elf64
+CC = gcc -g
 
 SRC = Sully.s
 
@@ -39,6 +39,7 @@ clean:
 
 fclean: clean
 	@rm -rf $(NAME) 2> /dev/null || echo "" > /dev/null
+	@rm -rf Sully_* peda-*
 	@echo "\033[33mRemoved: \033[32;1;4m$(NAME)\033[0m"
 
 re: fclean all
