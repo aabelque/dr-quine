@@ -6,7 +6,7 @@
 #    By: zizou </var/mail/zizou>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/03 22:17:29 by zizou             #+#    #+#              #
-#    Updated: 2021/10/06 12:09:23 by zizou            ###   ########.fr        #
+#    Updated: 2021/10/07 11:45:19 by zizou            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ clean:
 	@rm -rf $(O_DIR) 2> /dev/null || echo "" > /dev/null
 
 fclean: clean
-	@rm -rf $(NAME) 2> /dev/null || echo "" > /dev/null
+	@rm -rf $(NAME) Grace_kid.s 2> /dev/null || echo "" > /dev/null
 	@echo "\033[33mRemoved: \033[32;1;4m$(NAME)\033[0m"
 
 re: fclean all

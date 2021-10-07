@@ -6,7 +6,7 @@
 #    By: azziz <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/06 15:53:21 by azziz             #+#    #+#              #
-#    Updated: 2021/05/06 16:01:27 by azziz            ###   ########.fr        #
+#    Updated: 2021/10/07 11:46:59 by zizou            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ clean:
 	@rm -rf $(O_DIR) 2> /dev/null || echo "" > /dev/null
 
 fclean: clean
-	@rm -rf $(NAME) 2> /dev/null || echo "" > /dev/null
+	@rm -rf $(NAME) Grace_kid.c 2> /dev/null || echo "" > /dev/null
 	@echo "\033[33mRemoved: \033[32;1;4m$(NAME)\033[0m"
 
 re: fclean all
