@@ -6,7 +6,7 @@
 #    By: zizou </var/mail/zizou>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/03 22:17:17 by zizou             #+#    #+#              #
-#    Updated: 2021/10/06 23:27:33 by zizou            ###   ########.fr        #
+#    Updated: 2021/10/07 11:41:36 by zizou            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ O_DIR = obj/
 
 NAME = Sully
 
-NASM = nasm -g -f elf64
-CC = gcc -g
+NASM = nasm -f elf64
+CC = gcc
 
 SRC = Sully.s
 

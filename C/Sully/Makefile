@@ -6,7 +6,7 @@
 #    By: azziz <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/06 15:53:21 by azziz             #+#    #+#              #
-#    Updated: 2021/05/06 16:01:49 by azziz            ###   ########.fr        #
+#    Updated: 2021/10/07 11:42:59 by zizou            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ O_DIR = obj/
 
 NAME = Sully
 
-CC = gcc
+CC = gcc -g
 
 SRC = Sully.c
 
@@ -38,6 +38,7 @@ clean:
 
 fclean: clean
 	@rm -rf $(NAME) 2> /dev/null || echo "" > /dev/null
+	@rm -rf Sully_* peda-*
 	@echo "\033[33mRemoved: \033[32;1;4m$(NAME)\033[0m"
 
 re: fclean all
